@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
 project(OpenGLExample)
+set (CMAKE_CXX_STANDARD 11)
 
 # Add source files
 file(GLOB_RECURSE SOURCE_FILES 

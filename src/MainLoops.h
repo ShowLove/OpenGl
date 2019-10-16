@@ -5,6 +5,7 @@
 					  // Since we are not dynamic linking we need this
 
 // Library dependencies included by cmake
+// myTODO revisit if I want to change cmake to make these paths a bit cleaner
 #include <../Dependencies/GLEW/include/GL/glew.h>
 #include <../Dependencies/GLFW/include/GLFW/glfw3.h>
 
@@ -19,8 +20,14 @@ class MainLoops
 	// Returns true if successfull, false otherwise
 	bool legacyTriangle();
 	
-private:
+	// Draws triangle using modern opengl
+	// Returns true if successfull, false otherwise
+	bool modernOpenGLTriangle();
+	
+ private:
 
+	static const int m_NumVerticies = 6;
+	const static float m_Possitions[];
 };
 
 #endif // MAIN_LOOPS_H

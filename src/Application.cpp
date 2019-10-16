@@ -5,7 +5,9 @@ int main(void)
 {
 	MainLoops loop;
 	
-	loop.legacyTriangle();
+	// myTODO add error handling to loop return value
+	//loop.legacyTriangle();
+	loop.modernOpenGLTriangle();
 	
 	return 0;
 }
