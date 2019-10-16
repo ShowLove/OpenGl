@@ -4,12 +4,24 @@
     <ClCompile Include="C:\Users\showl\Desktop\git\OpenGL\src\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\showl\Desktop\git\OpenGL\src\MainLoops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\showl\Desktop\git\OpenGL\src\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\showl\Desktop\git\OpenGL\Dependencies\GLEW\include\GL\glew.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\showl\Desktop\git\OpenGL\Dependencies\GLFW\include\GLFW\glfw3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\showl\Desktop\git\OpenGL\src\MainLoops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\showl\Desktop\git\OpenGL\src\Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

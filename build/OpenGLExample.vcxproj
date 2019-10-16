@@ -318,7 +318,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClInclude Include="C:\Users\showl\Desktop\git\OpenGL\Dependencies\GLEW\include\GL\glew.h" />
     <ClInclude Include="C:\Users\showl\Desktop\git\OpenGL\Dependencies\GLFW\include\GLFW\glfw3.h" />
+    <ClInclude Include="C:\Users\showl\Desktop\git\OpenGL\src\MainLoops.h" />
+    <ClInclude Include="C:\Users\showl\Desktop\git\OpenGL\src\Utils.h" />
     <ClCompile Include="C:\Users\showl\Desktop\git\OpenGL\src\Application.cpp" />
+    <ClCompile Include="C:\Users\showl\Desktop\git\OpenGL\src\MainLoops.cpp" />
+    <ClCompile Include="C:\Users\showl\Desktop\git\OpenGL\src\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\showl\Desktop\git\OpenGL\build\ZERO_CHECK.vcxproj">
