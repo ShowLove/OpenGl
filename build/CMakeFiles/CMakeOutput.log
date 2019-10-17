@@ -9,7 +9,7 @@ The output was:
 Microsoft (R) Build Engine version 16.3.1+1def00d3d for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/14/2019 7:26:53 PM.
+Build started 10/17/2019 12:28:08 AM.
 Project "C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\3.16.0-rc1\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -35,7 +35,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.22
+Time Elapsed 00:00:01.34
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -54,7 +54,7 @@ The output was:
 Microsoft (R) Build Engine version 16.3.1+1def00d3d for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 10/14/2019 7:26:55 PM.
+Build started 10/17/2019 12:28:10 AM.
 Project "C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\3.16.0-rc1\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -80,7 +80,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.36
+Time Elapsed 00:00:01.35
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -92,56 +92,56 @@ The CXX compiler identification is MSVC, found in "C:/Users/showl/Desktop/git/Op
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/showl/Desktop/git/OpenGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_5b347.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.3.1+1def00d3d for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_9f2f1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.3.1+1def00d3d for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.23.28106.4 for x64
   testCCompiler.c
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5b347.dir\Debug\\" /Fd"cmTC_5b347.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\testCCompiler.c
-  cmTC_5b347.vcxproj -> C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_5b347.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9f2f1.dir\Debug\\" /Fd"cmTC_9f2f1.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  cmTC_9f2f1.vcxproj -> C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_9f2f1.exe
 
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/showl/Desktop/git/OpenGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_e8099.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.3.1+1def00d3d for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_be9cd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.3.1+1def00d3d for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.23.28106.4 for x64
   CMakeCCompilerABI.c
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e8099.dir\Debug\\" /Fd"cmTC_e8099.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCCompilerABI.c"
-  cmTC_e8099.vcxproj -> C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_e8099.exe
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_be9cd.dir\Debug\\" /Fd"cmTC_be9cd.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCCompilerABI.c"
+  cmTC_be9cd.vcxproj -> C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_be9cd.exe
 
 
 
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/showl/Desktop/git/OpenGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c581c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.3.1+1def00d3d for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_ac7e1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.3.1+1def00d3d for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.23.28106.4 for x64
-  testCXXCompiler.cxx
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c581c.dir\Debug\\" /Fd"cmTC_c581c.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
-  cmTC_c581c.vcxproj -> C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_c581c.exe
+  testCXXCompiler.cxx
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ac7e1.dir\Debug\\" /Fd"cmTC_ac7e1.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  cmTC_ac7e1.vcxproj -> C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_ac7e1.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/showl/Desktop/git/OpenGL/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_37013.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.3.1+1def00d3d for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_82951.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.3.1+1def00d3d for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.23.28106.4 for x64
-  Copyright (C) Microsoft Corporation.  All rights reserved.
   CMakeCXXCompilerABI.cpp
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_37013.dir\Debug\\" /Fd"cmTC_37013.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_37013.vcxproj -> C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_37013.exe
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_82951.dir\Debug\\" /Fd"cmTC_82951.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "C:\Program Files\CMake\share\cmake-3.16\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_82951.vcxproj -> C:\Users\showl\Desktop\git\OpenGL\build\CMakeFiles\CMakeTmp\Debug\cmTC_82951.exe
 
 
 

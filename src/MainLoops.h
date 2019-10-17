@@ -26,8 +26,8 @@ class MainLoops
 	
  private:
 
-	static const int m_NumVerticies = 6;
-	const static float m_Possitions[];
+	static const int m_NumVerticies = 6;	// The number of verticies actuall there are 3 with two points on each
+	const static float m_Possitions[]; 		// Array holding our 3 (2d) possitions used in modernOpenGLTriangle
 };
 
 #endif // MAIN_LOOPS_H

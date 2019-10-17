@@ -1,4 +1,5 @@
 #include "MainLoops.h"
+#include "Utils.h"
 
 const float MainLoops::m_Possitions[MainLoops::m_NumVerticies] = {		 // how big the size is of the array that holds our verticies
 	-0.5f, -0.5f,
@@ -6,7 +7,9 @@ const float MainLoops::m_Possitions[MainLoops::m_NumVerticies] = {		 // how big 
 	 0.5f, -0.5f,
 };
 
-bool MainLoops::modernOpenGLTriangle() {	
+bool MainLoops::modernOpenGLTriangle() {
+
+	Utils utils;
 
 	GLFWwindow* window;
 
@@ -64,6 +67,18 @@ bool MainLoops::modernOpenGLTriangle() {
 	
 	// Now we need to enable this vertex attribute (you could call this above glVertexAttribPointer since opengl is a state machine
 	glEnableVertexAttribArray(indexVAP);
+	
+	// This still works without a shader because the GPU provides a default shader
+	// A shader is code that's run on our GPU, usually (vertex shader then fragment shader)
+	// Vertex shader will get called once for each vertex, inour case 3 times for each point in the triangle
+	// Fragment shader (pixel shader) runs once for each pixel that needs to get rasterized, decides which color for each pixel
+	
+	// Create the shader
+	std::string vertexShader = utils.getVertexShaderString();
+	std::string fragmentShader = utils.getFragmentShaderString();
+	unsigned int shader = utils.CreateShader(vertexShader, fragmentShader);
+	// Bind our shader
+	glUseProgram(shader);
 	
 	// Loop until the user closes the window 
 	while (!glfwWindowShouldClose(window))
