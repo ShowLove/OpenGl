@@ -66,6 +66,45 @@ unsigned int Utils::CreateShader(const std::string& vertexShader, const std::str
 	return program;
 }
 
+Utils::ShaderProgramSource Utils::ParseShader(const std::string& filepath)
+{
+	std::ifstream stream(filepath);
+	
+	// Keep track of the mode vertex or fragment
+	enum class ShaderType
+	{
+		NONE = -1, VERTEX = 0, FRAGMENT = 1
+	};
+	
+	// Go through file line by line and check which shader we are at
+	// Current format of the file is #shader vertex/fragment to indicate a new shader
+	
+	std::string line;
+	std::stringstream ss[2]; // one for vertex and one for fragment
+	ShaderType type = ShaderType::NONE; // current shader mode
+	while(getline(stream,line)) {
+		
+		// Check to see if this is a mode line teling us vertex or fragment
+		if (line.find("#shader") != std::string::npos) {
+				if (line.find("vertex") != std::string::npos) {
+					// Set mode for vertex
+					type = ShaderType::VERTEX;	
+				} 
+				else if (line.find("fragment") != std::string::npos) {
+					// set mode for fragment
+					type = ShaderType::FRAGMENT;
+				}
+				
+		} // It's not a mode line process for either vertex or fragment
+		else {
+				ss[(int)type] << line << "\n";
+		}
+	}
+	
+	// Return the vertex and the fragment string
+	return { ss[0].str(), ss[1].str() };
+}
+
 std::string Utils::getVertexShaderString()
 {
 	// line 1 means: we're using glsl (gl shading language version 330) core -> we can't use any depricated functions

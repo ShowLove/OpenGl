@@ -73,10 +73,15 @@ bool MainLoops::modernOpenGLTriangle() {
 	// Vertex shader will get called once for each vertex, inour case 3 times for each point in the triangle
 	// Fragment shader (pixel shader) runs once for each pixel that needs to get rasterized, decides which color for each pixel
 	
-	// Create the shader
-	std::string vertexShader = utils.getVertexShaderString();
-	std::string fragmentShader = utils.getFragmentShaderString();
-	unsigned int shader = utils.CreateShader(vertexShader, fragmentShader);
+	// Create the shader using string functions
+	//std::string vertexShader = utils.getVertexShaderString();
+	//std::string fragmentShader = utils.getFragmentShaderString();
+	//unsigned int shader = utils.CreateShader(vertexShader, fragmentShader);
+	
+	// Create a shader from a filebuffer
+	Utils::ShaderProgramSource source = utils.ParseShader("../res/shaders/basic.shader");
+	unsigned int shader = utils.CreateShader(source.VertexSource, source.FragmentSource);
+	
 	// Bind our shader
 	glUseProgram(shader);
 	

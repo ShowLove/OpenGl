@@ -8,14 +8,13 @@
 #define GLEW_STATIC 1 // Removes error defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
 					  // Since we are not dynamic linking we need this
 
+#include <../Dependencies/GLEW/include/GL/glew.h>     // Needed for GL_VERSION and glGetString
+#include <../Dependencies/GLFW/include/GLFW/glfw3.h>  // Needed for the Create and Compile shader functions
 
-// Needed for GL_VERSION and glGetString
-#include <../Dependencies/GLEW/include/GL/glew.h>
-// Needed for the Create and Compile shader functions
-#include <../Dependencies/GLFW/include/GLFW/glfw3.h>
-
-#include<iostream>
-
+#include<iostream> // Used for cout
+#include <fstream> // Used to read in from a file
+#include <string>  // used for getline
+#include <sstream> // Used for  string stream. Add the strings that we"re reading into a buffer
 class Utils
 {
  public:
@@ -32,9 +31,20 @@ class Utils
 	// Get the id, specify the source code and compile the shader
 	// returns the id for the shader
 	static unsigned int CompileShader(unsigned int type, const std::string& source);
-	
+
+	// Used to return 2 variables in the ParseShader function
+	struct ShaderProgramSource
+	{
+		std::string VertexSource;
+		std::string FragmentSource;
+	};
+
+	// Parse a shader from a file
+	ShaderProgramSource ParseShader(const std::string& filepath);
+
 	// return a Vertex shader in the form of a string
 	std::string getVertexShaderString();
+	
 	// returns a Fragment shader in the form of a string
 	std::string getFragmentShaderString();
 	
@@ -54,6 +64,7 @@ class Utils
 	void printWorkingDir();
 	
 private:
+
 
 };
 
