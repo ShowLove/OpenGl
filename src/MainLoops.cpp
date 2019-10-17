@@ -99,6 +99,9 @@ bool MainLoops::modernOpenGLTriangle() {
 		// Poll for and process events 
 		glfwPollEvents();
 	}
+	
+	//clean up
+	glDeleteProgram(shader);
 
 	glfwTerminate();
 	

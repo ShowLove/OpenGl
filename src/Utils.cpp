@@ -97,7 +97,7 @@ std::string Utils::getFragmentShaderString()
 	"\n"
 	"void main()\n"
 	"{\n"
-	"	color = vec4(1.0, 0.0, 0.0, 1.0);\n"
+	"	color = vec4(0.0, 0.0, 1.0, 1.0);\n"
 	"}\n";
 	
 	return fragmentShader;
