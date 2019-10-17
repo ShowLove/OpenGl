@@ -24,10 +24,19 @@ class MainLoops
 	// Returns true if successfull, false otherwise
 	bool modernOpenGLTriangle();
 	
+	// Draws a box in open gl wihtout an index
+	// Returns true if successfull, false otherwise
+	bool openGLBox();
+	
  private:
 
+	// These values will draw us a triangle
 	static const int m_NumVerticies = 6;	// The number of verticies actuall there are 3 with two points on each
 	const static float m_Possitions[]; 		// Array holding our 3 (2d) possitions used in modernOpenGLTriangle
+	
+	// These values will draw a square
+	static const int m_NumVerticiesBox = 12;	// The number of verticies actuall there are 6 with two points on each
+	const static float m_BoxPossitions[]; 		// Array holding our 6 (2d) possitions used in openGLBox
 };
 
 #endif // MAIN_LOOPS_H

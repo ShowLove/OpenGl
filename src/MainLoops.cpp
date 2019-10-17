@@ -1,11 +1,97 @@
 #include "MainLoops.h"
 #include "Utils.h"
 
+// Positions for a Square
+const float MainLoops::m_BoxPossitions[MainLoops::m_NumVerticiesBox] = {		 // how big the size is of the array that holds our verticies
+	-0.5f, -0.5f,
+	 0.5f, -0.5f,
+	 0.5f,  0.5f,
+	 
+	 0.5f,  0.5f,
+    -0.5f,  0.5f,	 
+	-0.5f, -0.5f,	
+};
+
+// Positions for a triangle (half box)
 const float MainLoops::m_Possitions[MainLoops::m_NumVerticies] = {		 // how big the size is of the array that holds our verticies
 	-0.5f, -0.5f,
-	-0.0f,  0.5f,
 	 0.5f, -0.5f,
+	 0.5f,  0.5f,
 };
+
+bool MainLoops::openGLBox() 
+{
+
+	Utils utils;
+
+	GLFWwindow* window;
+
+	// Initialize the library
+	if (!glfwInit()) {
+		std::cout << "Error could not init glfw" << std::endl;
+		return false;
+	}
+	
+	// Create a windowed mode window and its OpenGL context 
+	window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+	if (!window) {
+		glfwTerminate();
+		std::cout << "Error could not create a window" << std::endl;
+		return false;
+	}
+	
+	// Make the window's context current 
+	glfwMakeContextCurrent(window);
+
+	// We need to call glewInit after we have a valid context
+	if(glewInit() != GLEW_OK) {
+		std::cout << "Error !GLEW_OK" << std::endl;
+		return false;
+	}
+	
+	int indexStartV = 0;  // If we wanted to start with the second vertecies it would be 1 used in glDrawArrays
+	int numVToBeRedered = 6; // For us Indecies is vertecies we have three points in the triange we are drawing
+	int sizeOfBufferMemory = (m_NumVerticiesBox * sizeof(float));
+	
+	int numBuffers = 1;  // The number of buffers we want to use 
+	unsigned int buffer; // We will write into this buffers memory address, 
+	 
+	glGenBuffers(numBuffers, &buffer); // Generate a buffer and give us back an ID for it
+	glBindBuffer(GL_ARRAY_BUFFER, buffer); // Select the buffer we have just generated (binding)
+	glBufferData(GL_ARRAY_BUFFER, sizeOfBufferMemory, m_BoxPossitions, GL_STATIC_DRAW); // Now we need to put data into that buffer
+
+	int indexVAP = 0;  // this is the first attribute
+	int sizeVAP  = 2;  // There ate two points per vertex
+	int strideVAP = (sizeof(float) * 2);  // How much we have to go forward to get to the second vertex (not the second attribute)
+	const void* attributeNumber =  0;     // This is a pointer (which is just number) representing the attribute since we only have 1, pass 0: first attribute
+	glVertexAttribPointer(indexVAP, sizeVAP, GL_FLOAT, GL_FALSE, strideVAP, attributeNumber);
+	
+	// Now we need to enable this vertex attribute (you could call this above glVertexAttribPointer since opengl is a state machine
+	glEnableVertexAttribArray(indexVAP);
+	
+	// Create a shader from a filebuffer
+	Utils::ShaderProgramSource source = utils.ParseShader("../res/shaders/basic.shader");
+	unsigned int shader = utils.CreateShader(source.VertexSource, source.FragmentSource);
+	
+	// Bind our shader
+	glUseProgram(shader);
+	
+	// Loop until the user closes the window 
+	while (!glfwWindowShouldClose(window))
+	{
+		// Render here 
+		glClear(GL_COLOR_BUFFER_BIT);
+		glDrawArrays(GL_TRIANGLES, indexStartV, numVToBeRedered); 
+		glfwSwapBuffers(window);
+		glfwPollEvents();
+	}
+	
+	glDeleteProgram(shader);
+	glfwTerminate();
+	
+	return true;
+	
+} //end openGLBox
 
 bool MainLoops::modernOpenGLTriangle() {
 

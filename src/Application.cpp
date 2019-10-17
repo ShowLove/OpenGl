@@ -7,7 +7,8 @@ int main(void)
 	
 	// myTODO add error handling to loop return value
 	//loop.legacyTriangle();
-	loop.modernOpenGLTriangle();
+	//loop.modernOpenGLTriangle();
+	loop.openGLBox();
 	
 	return 0;
 }
